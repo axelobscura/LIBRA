@@ -1,0 +1,26 @@
+<ul class="menulateral">
+    <li ng-class="{active: $route.current.activetab == 'pretrade'}">
+        <a href="#!/pretrade">
+            <img src="images/change.svg" alt="" title="" />
+            <div class="textos">
+                <h3>ANÁLISIS PRE-TRADE</h3>
+            </div>
+        </a>
+    </li>
+    <li ng-class="{active: $route.current.activetab == 'ejecucion'}">
+        <a href="#!/ejecucion">
+            <img src="images/timer.svg" alt="" title="" style="width:58px;" />
+            <div class="textos">
+                <h3>ANÁLISIS EN EJECUCIÓN</h3>
+            </div>
+        </a>
+    </li>
+    <li ng-class="{active: $route.current.activetab == 'analitycs'}">
+        <a href="#!/analitycs">
+            <img src="images/posttrade-b.svg" alt="" title="" style="width:58px;" />
+            <div class="textos">
+                <h3>ANÁLISIS POST-TRADE</h3>
+            </div>
+        </a>
+    </li>
+</ul>

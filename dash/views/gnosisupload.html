@@ -1,0 +1,60 @@
+<div ng-include="'partials/menutopgnosis.html'"></div>
+
+<section class="analytics contenido">
+    <div class="container">
+        <div class="col-md-3 menuc">
+            <div ng-include="'partials/menugnosis.html'"></div>
+        </div>
+        <div class="col-md-9" style="display:flex;height:100%;">
+            <div class="container gnosispanel">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div align="center">
+                            <hr>
+                            <table id="holder">
+                              <tr>
+                                <td>
+                                    <img src="images/upload.svg" alt="" title="" style="margin:20px 0;"><br>
+                                    Arrastre y cargue los archivos aquí
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><ul id="fileList"></ul></td>
+                              </tr>
+                            </table>
+                            <script>
+                                $('#holder').on({
+                                    'dragover dragenter': function(e) {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                    },
+                                    'drop': function(e) {
+                                        var dataTransfer =  e.originalEvent.dataTransfer;
+                                        if( dataTransfer && dataTransfer.files.length) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            $.each( dataTransfer.files, function(i, file) { 
+                                              var reader = new FileReader();
+                                              reader.onload = $.proxy(function(file, $fileList, event) {
+                                                var img = file.type.match('image.*') ? "<img src='" + event.target.result + "' /> " : "";
+                                                $fileList.prepend( $("<li>").append( img + file.name ) );
+                                              }, this, file, $("#fileList"));
+                                              reader.readAsDataURL(file);
+                                            });
+                                        }
+                                    }
+                                });
+                            </script>
+                            <form>
+                              <div class="form-group">
+                                  <label for="exampleFormControlFile1" style="margin-top: 20px;background:#10909e;color:#ffffff;padding:10px;">SELECCIONE Y CARGUE LOS ARCHIVOS</label>
+                                  <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top: 20px;background:#10909e;color:#ffffff;padding:10px;">
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

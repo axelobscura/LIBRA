@@ -1,0 +1,413 @@
+<div ng-include="'partials/menuejecucion.html'"></div>
+
+<section class="analytics contenido">
+    <div class="container" style="background: #0F3035;">
+        <div class="col-md-3 menuc">
+            <div ng-include="'partials/menulateral.html'"></div>
+        </div>
+        <div class="col-md-9" ng-controller="ejecucion" style="background: #ffffff;">
+            <div class="container statistics">
+                <div class="row">
+                    <div class="col-md-9" >
+                        <h2 class="status indicadores">Spreads esperados</h2>
+                       <table class="table table-striped spreadesperado">
+                            <thead>
+                              <tr>
+                                <th width="10%">Cliente</th>
+                                <th width="20%">Esperado de Volumen</th>
+                                <th width="20%">Esperado de Ingreso</th>
+                                <th width="20%">Propuesta de Spread</th>
+                                <th width="20%">Procentaje de bateo</th>
+                                <th width="10%"><i class="fa fa-plus-circle mas" aria-hidden="true" ng-click="spreadesperado=!spreadesperado"></i></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                
+                              <tr class="spreadesperado" ng-show="spreadesperado">
+                                <td>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="usr" ng-model="cliente">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="usr" ng-model="volumen">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="usr" ng-model="ingreso">
+                                    </div>
+                                </td>
+                                <td>00003</td>
+                                <td>8%</td>
+                                <td><i class="fa fa-plus-circle mas" aria-hidden="true" ng-click="addSpread()"></i></td>
+                              </tr>
+                              
+                              <tr ng-repeat="spread in spreads">
+                                <td>{{ spread.cliente }}</td>
+                                <td>{{ spread.volumen }}</td>
+                                <td>{{ spread.ingreso }}</td>
+                                <td>00003</td>
+                                <td>8%</td>
+                                <td><i class="fa fa-minus-circle mass" aria-hidden="true" ng-click="removeSpread($index)"></i></td>
+                              </tr>
+                              
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="status indicadores">INDICADORES</h2>
+                        <table class="table table-striped indicadores">
+                            <tbody>
+                              <tr>
+                                <td>671</td>
+                                <td>116</td>
+                              </tr>
+                              <tr>
+                                <td>440</td>
+                                <td>812</td>
+                              </tr>
+                              <tr>
+                                <td>68%</td>
+                                <td>80%</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <h2 class="status indicadores">Reporte de decisión sobre que proveedor es mejor que otro al momento</h2>
+                        <table class="table table-striped indicadores exis">
+                            <tbody>
+                              <tr>
+                                <td>X</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td>X</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td>O</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><hr style="margin-top: 2px; margin-bottom: 2px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="status">Reporte de spread</h2>
+                        <table class="table table-striped cl">
+                            <thead>
+                              <tr>
+                                <th>CL</th>
+                                <th>SP1</th>
+                                <th>SP2</th>
+                                <th>SP3</th>
+                                <th>SP4</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="spread in spreads">
+                                    <td>{{ spread.cliente }}</td>
+                                    <td class="verde">0.0002</td>
+                                    <td class="amarillo">0.0002</td>
+                                    <td class="amarillo">0.0002</td>
+                                    <td class="amarillo">0.0002</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="status">Reporte de divergencia entre el precio esperado y el precio de mercado (Skew Analysis Report).</h2>
+
+                        <div id="chartdivergencia" style="width: 100%;height: 300px;"></div>           
+                        <script>
+                        var chart = AmCharts.makeChart("chartdivergencia", {
+                            "type": "serial",
+                            "theme": "light",
+                            "legend": {
+                                "equalWidths": false,
+                                "useGraphSettings": true,
+                                "valueAlign": "left",
+                                "valueWidth": 120
+                            },
+                            "dataProvider": [{
+                                "date": "2012-01-01",
+                                "distance": 227,
+                                "townName": "New York",
+                                "townName2": "New York",
+                                "townSize": 25,
+                                "latitude": 40.71,
+                                "duration": 408
+                            }, {
+                                "date": "2012-01-02",
+                                "distance": 371,
+                                "townName": "Washington",
+                                "townSize": 14,
+                                "latitude": 38.89,
+                                "duration": 482
+                            }, {
+                                "date": "2012-01-03",
+                                "distance": 433,
+                                "townName": "Wilmington",
+                                "townSize": 6,
+                                "latitude": 34.22,
+                                "duration": 562
+                            }, {
+                                "date": "2012-01-04",
+                                "distance": 345,
+                                "townName": "Jacksonville",
+                                "townSize": 7,
+                                "latitude": 30.35,
+                                "duration": 379
+                            }, {
+                                "date": "2012-01-05",
+                                "distance": 480,
+                                "townName": "Miami",
+                                "townName2": "Miami",
+                                "townSize": 10,
+                                "latitude": 25.83,
+                                "duration": 501
+                            }, {
+                                "date": "2012-01-06",
+                                "distance": 386,
+                                "townName": "Tallahassee",
+                                "townSize": 7,
+                                "latitude": 30.46,
+                                "duration": 443
+                            }, {
+                                "date": "2012-01-07",
+                                "distance": 348,
+                                "townName": "New Orleans",
+                                "townSize": 10,
+                                "latitude": 29.94,
+                                "duration": 405
+                            }, {
+                                "date": "2012-01-08",
+                                "distance": 238,
+                                "townName": "Houston",
+                                "townName2": "Houston",
+                                "townSize": 16,
+                                "latitude": 29.76,
+                                "duration": 309
+                            }, {
+                                "date": "2012-01-09",
+                                "distance": 218,
+                                "townName": "Dalas",
+                                "townSize": 17,
+                                "latitude": 32.8,
+                                "duration": 287
+                            }, {
+                                "date": "2012-01-10",
+                                "distance": 349,
+                                "townName": "Oklahoma City",
+                                "townSize": 11,
+                                "latitude": 35.49,
+                                "duration": 485
+                            }, {
+                                "date": "2012-01-11",
+                                "distance": 603,
+                                "townName": "Kansas City",
+                                "townSize": 10,
+                                "latitude": 39.1,
+                                "duration": 890
+                            }, {
+                                "date": "2012-01-12",
+                                "distance": 534,
+                                "townName": "Denver",
+                                "townName2": "Denver",
+                                "townSize": 18,
+                                "latitude": 39.74,
+                                "duration": 810
+                            }, {
+                                "date": "2012-01-13",
+                                "townName": "Salt Lake City",
+                                "townSize": 12,
+                                "distance": 425,
+                                "duration": 670,
+                                "latitude": 40.75,
+                                "dashLength": 8,
+                                "alpha": 0.4
+                            }, {
+                                "date": "2012-01-14",
+                                "latitude": 36.1,
+                                "duration": 470,
+                                "townName": "Las Vegas",
+                                "townName2": "Las Vegas"
+                            }, {
+                                "date": "2012-01-15"
+                            }, {
+                                "date": "2012-01-16"
+                            }, {
+                                "date": "2012-01-17"
+                            }, {
+                                "date": "2012-01-18"
+                            }, {
+                                "date": "2012-01-19"
+                            }],
+                            "valueAxes": [{
+                                "id": "distanceAxis",
+                                "axisAlpha": 0,
+                                "gridAlpha": 0,
+                                "position": "left",
+                                "title": "distance"
+                            }, {
+                                "id": "latitudeAxis",
+                                "axisAlpha": 0,
+                                "gridAlpha": 0,
+                                "labelsEnabled": false,
+                                "position": "right"
+                            }, {
+                                "id": "durationAxis",
+                                "duration": "mm",
+                                "durationUnits": {
+                                    "hh": "h ",
+                                    "mm": "min"
+                                },
+                                "axisAlpha": 0,
+                                "gridAlpha": 0,
+                                "inside": true,
+                                "position": "right",
+                                "title": "duration"
+                            }],
+                            "graphs": [{
+                                "alphaField": "alpha",
+                                "balloonText": "[[value]] miles",
+                                "dashLengthField": "dashLength",
+                                "fillAlphas": 0.7,
+                                "legendPeriodValueText": "total: [[value.sum]] mi",
+                                "legendValueText": "[[value]] mi",
+                                "title": "distance",
+                                "type": "column",
+                                "valueField": "distance",
+                                "valueAxis": "distanceAxis"
+                            }, {
+                                "balloonText": "latitude:[[value]]",
+                                "bullet": "round",
+                                "bulletBorderAlpha": 1,
+                                "useLineColorForBulletBorder": true,
+                                "bulletColor": "#FFFFFF",
+                                "bulletSizeField": "townSize",
+                                "dashLengthField": "dashLength",
+                                "descriptionField": "townName",
+                                "labelPosition": "right",
+                                "labelText": "[[townName2]]",
+                                "legendValueText": "[[value]]/[[description]]",
+                                "title": "latitude/city",
+                                "fillAlphas": 0,
+                                "valueField": "latitude",
+                                "valueAxis": "latitudeAxis"
+                            }, {
+                                "bullet": "square",
+                                "bulletBorderAlpha": 1,
+                                "bulletBorderThickness": 1,
+                                "dashLengthField": "dashLength",
+                                "legendValueText": "[[value]]",
+                                "title": "duration",
+                                "fillAlphas": 0,
+                                "valueField": "duration",
+                                "valueAxis": "durationAxis"
+                            }],
+                            "chartCursor": {
+                                "categoryBalloonDateFormat": "DD",
+                                "cursorAlpha": 0.1,
+                                "cursorColor":"#000000",
+                                 "fullWidth":true,
+                                "valueBalloonsEnabled": false,
+                                "zoomable": false
+                            },
+                            "dataDateFormat": "YYYY-MM-DD",
+                            "categoryField": "date",
+                            "categoryAxis": {
+                                "dateFormats": [{
+                                    "period": "DD",
+                                    "format": "DD"
+                                }, {
+                                    "period": "WW",
+                                    "format": "MMM DD"
+                                }, {
+                                    "period": "MM",
+                                    "format": "MMM"
+                                }, {
+                                    "period": "YYYY",
+                                    "format": "YYYY"
+                                }],
+                                "parseDates": true,
+                                "autoGridCount": false,
+                                "axisColor": "#555555",
+                                "gridAlpha": 0.1,
+                                "gridColor": "#FFFFFF",
+                                "gridCount": 50
+                            },
+                            "export": {
+                                "enabled": true
+                             }
+                        });
+                        </script>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="status indicadores">Reporte de cierre al momento por cliente/proveedor</h2>
+                        <table class="table table-striped data desempeno dos">
+                            <thead>
+                              <tr>
+                                <th>CL</th>
+                                <th>TRAN</th>
+                                <th>ACEP</th>
+                                <th>RECH</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="spread in spreads">
+                                    <td>{{ spread.cliente }}</td>
+                                    <td>0.0</td>
+                                    <td>0.0</td>
+                                    <td>0.0</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="status indicadores">Reporte de Request</h2>
+                        <table class="table table-striped data desempeno dos">
+                            <thead>
+                              <tr>
+                                <th>CL</th>
+                                <th>TRAN</th>
+                                <th>ACEP</th>
+                                <th>RECH</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="spread in spreads">
+                                    <td>{{ spread.cliente }}</td>
+                                    <td>0.0</td>
+                                    <td>0.0</td>
+                                    <td>0.0</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

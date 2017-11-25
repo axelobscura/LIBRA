@@ -1,0 +1,205 @@
+@font-face {
+font-family: 'KelsonRegular';
+src: url('../fonts/KelsonSansRegular.otf');
+}
+@font-face {
+font-family: 'KelsonLight';
+src: url('../fonts/KelsonSansLight.otf');
+}
+body { margin: 0; padding: 0;font-family: 'KelsonRegular', sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'KelsonLight', sans-serif;}
+a { transition: all 1s;}
+body.hold-transition.login-page { background: #ffffff; }
+.btn-primary { background: #EF1B27; border: none;}
+.btn.focus, .btn:focus, .btn-primary:hover { background: #ca1b25;}
+.login-logo {margin-bottom: 0px;text-align:center;}
+.login-logo img { padding: 20px 0;}
+section.panel { margin: 0; padding: 0; box-shadow: none;}
+section.panel .container { width: 100%;}
+section.panel .row.menu { background:#0f3035; padding: 10px;}
+section.panel .row.menu a.logopanel img { width: 80px;}
+section.panel .row.menu ul.menutop { position: relative; float: right;}
+section.panel .row.menu ul.menutop li { position: relative;float: left;padding: 5px 17px 0 17px;}
+section.panel .row.menu ul.menutop li:nth-child(2) {padding: 12px 17px 0 17px;}
+section.panel .row.menu ul.menutop li a img { width: 35px;}
+section.panel .row.menu ul.menutop li a { transition: all 1s;}
+section.panel .row.menu ul.menutop li a:hover { background: #0a1e21;}
+section.panel .row.panelservicios { padding: 90px 90px;}
+section.panel .row.panelservicios .col-xs-12 {display: flex;align-items: column;justify-content: center;flex-direction: column;-webkit-animation: fadein 2s; -moz-animation: fadein 5s; -ms-animation: fadein 5s; -o-animation: fadein 5s; animation: fadein 5s; padding: 0 15px;}
+section.panel .row.panelservicios a.logopanel { width: 100%; display: block;display: flex;justify-content: center; margin: 20px 0; transition: all 1s;}
+section.panel .row.panelservicios a.logopanel img { width: 150px;}
+section.panel .row.panelservicios .box { width: 100%; background: #0f3035; min-height: 45px; cursor: pointer; transition: all 1s;}
+section.panel .row.panelservicios .box:hover { background: #1d5b64;}
+section.panel .row.panelservicios .box h2 { color:#ffffff; margin: 0; padding: 15px;font-size: 18px;}
+section.panel .row.panelservicios .box { text-align: center;}
+section.analitycs.menu { background:#eff0f1; }
+section.analitycs.menu .container { width: 100%;}
+section.analitycs.menu .container.menu a.logopanel { margin-left: 10%;}
+section.analitycs.menu .container.menu a.logopanel img { width: 180px; margin: 5px; padding: 5px;}
+section.analitycs.menu ul.menutop { position: relative; float: right; margin-top: 8px; list-style: none; color: #333333;}
+section.analitycs.menu ul.menutop li { position: relative;float: left;padding: 5px 17px 0 17px;}
+section.analitycs.menu ul.menutop li:nth-child(2) {padding: 12px 17px 0 17px;}
+section.analitycs.menu ul.menutop li a img { width: 35px;}
+section.analitycs.menu ul.menutop li a { transition: all 1s;}
+section.analitycs.menu ul.menutop li a:hover { background: #0a1e21;}
+section.analytics.contenido {display: flex;
+  flex-direction: column;
+  height: 100vh;       }
+section.analytics.contenido .container { width: 100%; padding: 0; }
+section.analytics.contenido .container.gnosispanel {flex-direction: column;display: flex;height: 100%;animation: fadein 5s;}
+section.analytics.contenido .container .col-md-3.menuc {background:#0f3035;height: 100vh; padding: 0; display: flex;}
+section.analytics.contenido ul.menulateral { margin: 0; padding: 0; width: 100%;}
+section.analytics.contenido ul.menulateral li { position: relative; float: left; width: 100%; padding: 5px 0; transition: all 1s;min-height: 85px;}
+section.analytics.contenido ul.menulateral li:hover, section.analytics.contenido ul.menulateral li.active { background: #1e5e68;}
+section.analytics.contenido ul.menulateral li a { width: 100%;display: block;}
+section.analytics.contenido ul.menulateral li a img {position: relative;width: 59px;text-align: center;margin: 0 auto;display: flex;padding: 25px 0;}
+section.analytics.contenido ul.menulateral li a .textos {  padding: 5px 0;}
+section.analytics.contenido ul.menulateral li a .textos h3 { margin: 0; color: #dedede; font-size: 15px;padding: 4px 0 0 0; width: 100%; text-align: center;}
+section.analytics.contenido ul.menulateral li a .textos h4 { margin: 0; padding: 3px 0 20px 0; font-size: 13px;}
+section.analytics.contenido h2.status { background: #0F3035; color:#ffffff;font-size: 14px;padding: 10px;}
+.table.table-striped.data tbody { text-align: center;}
+p.latencia {position: relative;float: left;color: #fff;padding: 15px 0 0 0;font-size: 25px;}
+.col-md-3.indicadores h2.status { text-align: center; font-size: 20px;}
+.table.table-striped.indicadores { background: #0f3035; color:#ffffff; font-size: 11px;}
+.table.table-striped.indicadores thead th { text-align: center;}
+.table.table-striped.indicadores tbody td { text-align: center; background: #1a5058; }
+table.table.table-striped.cl thead { text-align: center; font-size: 25px;}
+table.table.table-striped.cl tbody { text-align: center;}
+table.table.table-striped.cl tbody tr td.verde { background: #c5deb5; color: #333333;}
+table.table.table-striped.cl tbody tr td.amarillo { background: #fed86f; color: #333333;}
+.container.gnosispanel { }
+.container.gnosispanel h3.tit { width: 100%; padding: 15px 0; background: #0f3035; text-align: center; color: #ffffff; font-size: 18px;}
+.container.gnosispanel a:hover { opacity: 0.7; }
+.container.gnosispanel a img { width:100px;}
+.container.gnosispanel .gpanel {padding: 0px 0;}
+.container.gnosispanel .row { display: flex; align-items: center; height: 100%; position: absolute;width: 100%;}
+.container.gnosispanel.data .row { flex-direction: row;flex-flow: row wrap; }
+.list-group.archivos, .row.archivos { padding: 0 150px;}
+.outerlog {display: table;position: absolute;height: 100%;width: 100%;}
+.middlelog { display: table-cell;vertical-align: middle; }
+.col-md-12.gpa {display:flex;height:100%;}
+table#holder {border: 5px dashed #CCC;width:100%;font-family:Verdana;}
+table#holder tr:first-child {height:50px;text-align:center;}
+table#holder tr:last-child {height:100px;line-height: 50px;}
+table#holder li img {height: 30px;}
+.list-group-item.active { background: #10909e;}
+.col-md-3.menuc .ng-scope { width: 100%;}
+h2.conciliaciones { background: #000000; color: #ffffff; padding: 5px; font-size: 18px;}
+.row.cca h2 { font-size: 13px; background: #000000; color: #ffffff; padding: 4px; text-align: center;}
+.container.spreder {}
+.col-md-9.spreder {background:#ffffff;padding-bottom:30px;}
+li.baz { background: #0F3035;}
+.table.table-striped.insight {text-align: center; background: #0f3035;}
+.container.gnosispanel.pleroma a img { width: 100px;margin-bottom: 20px;}
+td.crono { border-right:2px solid #0f3035; }
+p.latex {position: relative;float: left;color: #fff;padding-top: 25px;}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+/* iCheck plugin Square skin, blue
+----------------------------------- */
+.icheckbox_square-blue,
+.iradio_square-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(blue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-blue {
+    background-position: 0 0;
+}
+    .icheckbox_square-blue.hover {
+        background-position: -24px 0;
+    }
+    .icheckbox_square-blue.checked {
+        background-position: -48px 0;
+    }
+    .icheckbox_square-blue.disabled {
+        background-position: -72px 0;
+        cursor: default;
+    }
+    .icheckbox_square-blue.checked.disabled {
+        background-position: -96px 0;
+    }
+
+.iradio_square-blue {
+    background-position: -120px 0;
+}
+    .iradio_square-blue.hover {
+        background-position: -144px 0;
+    }
+    .iradio_square-blue.checked {
+        background-position: -168px 0;
+    }
+    .iradio_square-blue.disabled {
+        background-position: -192px 0;
+        cursor: default;
+    }
+    .iradio_square-blue.checked.disabled {
+        background-position: -216px 0;
+    }
+.table.table-striped.insight thead th { background: #09262b; color:#ffffff;}
+.table.table-striped.insight td { background: #4e858b; color: #ffffff; }
+.table.table-striped.desempeno thead th { background: #4e858b; color: #ffffff;}
+.table.table-striped.desempeno td {background: #09262b; color:#ffffff;}
+.table.table-striped.desempeno.dos td {background: #ffffff; color:#09262b;}
+h2.status.indicadores {background: #0F3035; color: #ffffff;}
+.container.pleromapanel {width:100%;display:flex;height:100%;}
+.fa.fa-plus-circle.mas { font-size: 35px;margin-top: 2px; cursor: pointer; transition: all 1s;}
+.fa.fa-plus-circle.mas:hover { color: #ccc;}
+.fa.fa-plus-circle.mas:hover { color: #ccc;}
+.fa.fa-plus-circle.mass { font-size: 55px;margin-top: 2px; cursor: pointer; transition: all 1s; color: #1E5E68;}
+.fa.fa-minus-circle.mass { font-size: 25px; cursor: pointer; transition: all 1s; color: #1E5E68; margin-right: 0px;}
+.fa.fa-plus-circle.mass:hover { color: #ccc;}
+.table.table-striped.indicadores.exis tbody td { background: #fff; color:#000000; font-size: 20px;}
+table.table.table-striped.spreadesperado { text-align: center;}
+table.table.table-striped.spreadesperado thead tr th { text-align: center;}
+#chartpl a, #cierrediv a, #liquidez a, #transaccion a, #cierre a, #chartdivergencia a, #preGraph a { display: none !important;}
+#chartRadar a { display: none !important;}
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-moz-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox_square-blue,
+    .iradio_square-blue {
+        background-image: url(blue@2x.png);
+        -webkit-background-size: 240px 24px;
+        background-size: 240px 24px;
+    }
+}

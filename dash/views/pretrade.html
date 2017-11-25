@@ -1,0 +1,151 @@
+<div ng-include="'partials/menutop.html'"></div>
+
+<section class="analytics contenido">
+    <div class="container">
+        <div class="col-md-3 menuc">
+            <div ng-include="'partials/menulateral.html'"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="container statistics">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="status">Reporte de información relevante del día anterior</h2>
+                        <table class="table table-striped insight">
+                            <thead>
+                              <tr>
+                                <th>INSIGHT</th>
+                                <th colspan="2">VALOR</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="uno crono">Cierre Mercado</td>
+                                <td colspan="2">XX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Precio mercado cierre</td>
+                                <td colspan="2">XX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Mejor cliente</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Mejor proveedor oferta</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Peor proveedor oferta</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Peor cliente</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Prom. tiempo respuesta</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Mejor tiempo respuesta Pro</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Peor tiempo respuesta Pro</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Mejor tiempo respuesta Cliente</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Peor tiempo respuesta Cliente</td>
+                                <td colspan="2">XXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Punto más alto mercado</td>
+                                <td class="crono">XX</td>
+                                <td>00:00:00</td>
+                              </tr>
+                              <tr>
+                                <td class="uno crono">Punto más bajo mercado</td>
+                                <td class="crono">XX</td>
+                                <td>00:00:00</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-7">
+                        <h2 class="status">Reporte de desempeño cliente/proveedor de pérdidas y ganancias (P&L)</h2>
+                        <table class="table table-striped data desempeno">
+                            <thead>
+                              <tr>
+                                <th>CLIENTE</th>
+                                <th>SPOT</th>
+                                <th>EXITOS</th>
+                                <th>PROM</th>
+                                <th>FRACASOS</th>
+                                <th>PROM</th>
+                                <th>AFECTACION</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>C_8</td>
+                                <td>1</td>
+                                <td>30</td>
+                                <td>XX</td>
+                                <td>12</td>
+                                <td>XX</td>
+                                <td>+</td>
+                              </tr>
+                              <tr>
+                                <td>C_3</td>
+                                <td>1</td>
+                                <td>30</td>
+                                <td>XX</td>
+                                <td>12</td>
+                                <td>XX</td>
+                                <td>+</td>
+                              </tr>
+                              <tr>
+                                <td>C_6</td>
+                                <td>1</td>
+                                <td>30</td>
+                                <td>XX</td>
+                                <td>12</td>
+                                <td>XX</td>
+                                <td>+</td>
+                              </tr>
+                              <tr>
+                                <td>C_5</td>
+                                <td>1</td>
+                                <td>30</td>
+                                <td>XX</td>
+                                <td>12</td>
+                                <td>XX</td>
+                                <td>+</td>
+                              </tr>
+                              <tr>
+                                <td>C_10</td>
+                                <td>1</td>
+                                <td>30</td>
+                                <td>XX</td>
+                                <td>12</td>
+                                <td>XX</td>
+                                <td>+</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <h2 class="status">Reporte de volumen histórico de compra - venta de dólar/peso de cliente/proveedor</h2>
+                        <div ng-controller="pretrade" style="height: 400px; width: 100%;">
+                            <am-chart id="preGraph" options="preGraph"></am-chart>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

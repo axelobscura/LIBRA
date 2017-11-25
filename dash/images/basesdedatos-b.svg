@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="_x33_5_x5F_modeling_x5F_api"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64"
+	 style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="47" y1="59" x2="63" y2="59"/>
+	<polyline class="st1" points="59,63 63,59 59,55 	"/>
+	<polyline class="st1" points="36,9 32,5 36,1 	"/>
+	<path class="st2" d="M32,5c14.9,0,27,12.1,27,27S46.9,59,32,59H0"/>
+	<g>
+		<polygon class="st3" points="19,38 16,32 19,26 26,26 29,32 26,38 		"/>
+		<polygon class="st3" points="33,46 30,40 33,34 40,34 43,40 40,46 		"/>
+		<polygon class="st3" points="33,30 30,24 33,18 40,18 43,24 40,30 		"/>
+		<circle class="st3" cx="45" cy="32" r="1"/>
+		<circle class="st3" cx="25" cy="43" r="1"/>
+		<circle class="st3" cx="25" cy="21" r="1"/>
+	</g>
+	<path class="st0" d="M18,55.1C10.2,50.4,5,41.8,5,32C5,18.8,14.5,7.8,27.1,5.4"/>
+</g>
+</svg>
