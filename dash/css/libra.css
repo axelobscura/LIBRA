@@ -35,7 +35,7 @@ section.panel .row.panelservicios .box { text-align: center;}
 section.analitycs.menu { background:#eff0f1; }
 section.analitycs.menu .container { width: 100%;}
 section.analitycs.menu .container.menu a.logopanel { margin-left: 10%;}
-section.analitycs.menu .container.menu a.logopanel img { width: 180px; margin: 5px; padding: 5px;}
+section.analitycs.menu .container.menu a.logopanel img { width: 100px; margin: 5px; padding: 5px; margin-left: 20px}
 section.analitycs.menu ul.menutop { position: relative; float: right; margin-top: 8px; list-style: none; color: #333333;}
 section.analitycs.menu ul.menutop li { position: relative;float: left;padding: 5px 17px 0 17px;}
 section.analitycs.menu ul.menutop li:nth-child(2) {padding: 12px 17px 0 17px;}
