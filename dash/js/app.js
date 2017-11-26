@@ -4,17 +4,25 @@ app.config(function($routeProvider) {
     .when("/", {
         templateUrl : "views/inicio.html"
     })
-    .when("/panel", {
-        templateUrl : "views/panel.html"
-    })
     .when("/analitycs", {
         templateUrl : "views/analytics.html",
         controller: widgetsController,
         activetab: 'analitycs'
     })
-    .when("/pretrade", {
-        templateUrl : "views/pretrade.html",
-        activetab: 'pretrade'
+    .when("/eupm", {
+        templateUrl : "views/eupm.html",
+        controller: widgetsController,
+        activetab: 'eupm'
+    })
+    .when("/cierre", {
+        templateUrl : "views/cierre.html",
+        controller: widgetsController,
+        activetab: 'cierre'
+    })
+    .when("/apin", {
+        templateUrl : "views/apin.html",
+        controller: widgetsController,
+        activetab: 'apin'
     });
 });
 

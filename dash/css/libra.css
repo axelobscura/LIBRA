@@ -1,13 +1,13 @@
 @font-face {
-font-family: 'KelsonRegular';
-src: url('../fonts/KelsonSansRegular.otf');
+font-family: 'MetropolisRegular';
+src: url('../fonts/Metropolis-Regular.otf');
 }
 @font-face {
-font-family: 'KelsonLight';
-src: url('../fonts/KelsonSansLight.otf');
+font-family: 'MetropolisBold';
+src: url('../fonts/Metropolis-Bold.otf');
 }
-body { margin: 0; padding: 0;font-family: 'KelsonRegular', sans-serif;}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'KelsonLight', sans-serif;}
+body { margin: 0; padding: 0;font-family: 'MetropolisRegular', sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'MetropolisBold', sans-serif;}
 a { transition: all 1s;}
 body.hold-transition.login-page { background: #ffffff; }
 .btn-primary { background: #EF1B27; border: none;}
@@ -34,9 +34,8 @@ section.panel .row.panelservicios .box h2 { color:#ffffff; margin: 0; padding: 1
 section.panel .row.panelservicios .box { text-align: center;}
 section.analitycs.menu { background:#eff0f1; }
 section.analitycs.menu .container { width: 100%;}
-section.analitycs.menu .container.menu a.logopanel { margin-left: 10%;}
-section.analitycs.menu .container.menu a.logopanel img { width: 100px; margin: 5px; padding: 5px; margin-left: 20px}
-section.analitycs.menu ul.menutop { position: relative; float: right; margin-top: 8px; list-style: none; color: #333333;}
+section.analitycs.menu .container.menu a.logopanel img { width: 100px; margin: 5px; padding: 5px; margin-left: 48px}
+section.analitycs.menu ul.menutop { position: relative; float: right; margin-top: 35px; list-style: none; color: #333333;}
 section.analitycs.menu ul.menutop li { position: relative;float: left;padding: 5px 17px 0 17px;}
 section.analitycs.menu ul.menutop li:nth-child(2) {padding: 12px 17px 0 17px;}
 section.analitycs.menu ul.menutop li a img { width: 35px;}
@@ -47,16 +46,23 @@ section.analytics.contenido {display: flex;
   height: 100vh;       }
 section.analytics.contenido .container { width: 100%; padding: 0; }
 section.analytics.contenido .container.gnosispanel {flex-direction: column;display: flex;height: 100%;animation: fadein 5s;}
-section.analytics.contenido .container .col-md-3.menuc {background:#0f3035;height: 100vh; padding: 0; display: flex;}
-section.analytics.contenido ul.menulateral { margin: 0; padding: 0; width: 100%;}
-section.analytics.contenido ul.menulateral li { position: relative; float: left; width: 100%; padding: 5px 0; transition: all 1s;min-height: 85px;}
-section.analytics.contenido ul.menulateral li:hover, section.analytics.contenido ul.menulateral li.active { background: #1e5e68;}
+section.analytics.contenido .container .col-md-3.menuc {background:#EFF0F1;height: 100vh; padding: 0; display: flex;}
+section.analytics.contenido ul.menulateral { margin: 0; padding: 0; width: 100%; list-style: none;}
+section.analytics.contenido ul.menulateral li { position: relative; float: left; width: 100%; padding: 15px 0; transition: all 1s;min-height: 85px;}
+section.analytics.contenido ul.menulateral li:hover, section.analytics.contenido ul.menulateral li.active { background: #d1d2d2;}
 section.analytics.contenido ul.menulateral li a { width: 100%;display: block;}
-section.analytics.contenido ul.menulateral li a img {position: relative;width: 59px;text-align: center;margin: 0 auto;display: flex;padding: 25px 0;}
+section.analytics.contenido ul.menulateral li a img {position: relative;width: 130px;text-align: center;margin: 0 auto;display: flex;padding: 5px 0;}
+h3.clientes { text-align: center;}
 section.analytics.contenido ul.menulateral li a .textos {  padding: 5px 0;}
-section.analytics.contenido ul.menulateral li a .textos h3 { margin: 0; color: #dedede; font-size: 15px;padding: 4px 0 0 0; width: 100%; text-align: center;}
+section.analytics.contenido ul.menulateral li a .textos h3 { margin: 0; color: #333333; font-size: 15px;padding: 4px 0 0 0; width: 100%; text-align: center;}
 section.analytics.contenido ul.menulateral li a .textos h4 { margin: 0; padding: 3px 0 20px 0; font-size: 13px;}
-section.analytics.contenido h2.status { background: #0F3035; color:#ffffff;font-size: 14px;padding: 10px;}
+section.analytics.contenido h2.status { background: #EFF0F1; color:#555555;font-size: 14px;padding: 10px;}
+section.analytics.contenido h2.status.roja { background: #940001; color: #ffffff; text-align: center; }
+section.analytics.contenido h2.status.azul { background: #002a48; color: #ffffff; }
+p.fecha { text-align: right;}
+.table > tbody > tr > td { padding: 5px;}
+.table.table-bordered.reder thead { background: #941100; color:#ffffff; text-align: center;}
+.col-md-10.contenido {background: #ffffff;padding-bottom:30px; border-top: 5px solid #333;}
 .table.table-striped.data tbody { text-align: center;}
 p.latencia {position: relative;float: left;color: #fff;padding: 15px 0 0 0;font-size: 25px;}
 .col-md-3.indicadores h2.status { text-align: center; font-size: 20px;}
@@ -93,6 +99,8 @@ li.baz { background: #0F3035;}
 .container.gnosispanel.pleroma a img { width: 100px;margin-bottom: 20px;}
 td.crono { border-right:2px solid #0f3035; }
 p.latex {position: relative;float: left;color: #fff;padding-top: 25px;}
+.col-md-2.menuc { background: #EFF0F1; border-right: 5px solid #333333;}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

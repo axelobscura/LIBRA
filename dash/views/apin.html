@@ -1,0 +1,120 @@
+<div ng-include="'partials/menutop.html'"></div>
+
+<section class="analytics contenido">
+    <div class="container">
+        <div class="col-md-2 menuc">
+            <div ng-include="'partials/menulateral.html'"></div>
+        </div>
+        <div class="col-md-10 contenido">
+            <div class="container statistics">
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                      <div class="input-group add-on">
+                        <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                      </div>
+                      <h3 class="clientes">Top 5 de clientes</h3>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="status azul">Sum of costs and revenues</h2>
+                    <div id="barritas" style="width:100%;height:300px;"></div>
+                    <script>
+                    var chart = AmCharts.makeChart("barritas", {
+                    	"type": "serial",
+                         "theme": "none",
+                    	"categoryField": "year",
+                    	"rotate": true,
+                    	"startDuration": 1,
+                    	"categoryAxis": {
+                    		"gridPosition": "start",
+                    		"position": "left"
+                    	},
+                    	"trendLines": [],
+                    	"graphs": [
+                    		{
+                    			"balloonText": "Income:[[value]]",
+                    			"fillAlphas": 0.8,
+                    			"id": "AmGraph-1",
+                    			"lineAlpha": 0.2,
+                    			"title": "Income",
+                    			"type": "column",
+                    			"valueField": "income"
+                    		},
+                    		{
+                    			"balloonText": "Expenses:[[value]]",
+                    			"fillAlphas": 0.8,
+                    			"id": "AmGraph-2",
+                    			"lineAlpha": 0.2,
+                    			"title": "Expenses",
+                    			"type": "column",
+                    			"valueField": "expenses"
+                    		}
+                    	],
+                    	"guides": [],
+                    	"valueAxes": [
+                    		{
+                    			"id": "ValueAxis-1",
+                    			"position": "top",
+                    			"axisAlpha": 0
+                    		}
+                    	],
+                    	"allLabels": [],
+                    	"balloon": {},
+                    	"titles": [],
+                    	"dataProvider": [
+                    		{
+                    			"year": 2005,
+                    			"income": 23.5,
+                    			"expenses": 18.1
+                    		},
+                    		{
+                    			"year": 2006,
+                    			"income": 26.2,
+                    			"expenses": 22.8
+                    		},
+                    		{
+                    			"year": 2007,
+                    			"income": 30.1,
+                    			"expenses": 23.9
+                    		},
+                    		{
+                    			"year": 2008,
+                    			"income": 29.5,
+                    			"expenses": 25.1
+                    		},
+                    		{
+                    			"year": 2009,
+                    			"income": 24.6,
+                    			"expenses": 25
+                    		}
+                    	],
+                        "export": {
+                        	"enabled": true
+                         }
+
+                    });
+                    </script>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
